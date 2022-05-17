@@ -1,10 +1,15 @@
 'use strict';
 const cartBtn = document.getElementById('cart'),
-  cartModal = document.querySelector('.cart');
+  cartModal = document.querySelector('.cart'),
+  cartCloseBtn = cartModal.querySelector('.cart-close');
+
 const openCart = () => {
   cartModal.style.display = 'flex';
 }
-
-cartBtn.onclick = function () {
-  openCart();
+const closeCart = () => {
+  cartModal.style.display = '';
 }
+
+
+cartBtn.onclick = openCart;
+cartCloseBtn.onclick = closeCart;
